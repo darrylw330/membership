@@ -57,6 +57,13 @@ class MembersController < ApplicationController
     end
   end
 
+  # New action - Member dashboard
+  def dashboard
+    # Add your logic for the member dashboard here
+    # For example, if you want to display a message:
+    @message = "Welcome to the Member Dashboard, #{current_user.email}!"
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_member
