@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   root 'home#index'
 
   # Route for the member dashboard
-  get 'member_dashboard', to: 'members#dashboard', as: :member_dashboard
+  get 'members/dashboard', to: 'members#dashboard', as: :member_dashboard
 
   # Resources routes for admins and members
   resources :admins

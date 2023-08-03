@@ -3,4 +3,17 @@
 <h1>Welcome to the Member Dashboard</h1>
 <p><%= @message %></p>
 
+<!-- Display the membership details -->
+<h2>Membership Details</h2>
+<dl>
+  <dt>Email:</dt>
+  <dd><%= @member.email %></dd>
+
+  <dt>Number:</dt>
+  <dd><%= @member.number %></dd>
+
+  <dt>Membership Status:</dt>
+  <dd><%= @member.membership_status %></dd>
+</dl>
+
 <%= link_to 'Go to Home Page', root_path %>
