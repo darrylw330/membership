@@ -61,6 +61,7 @@ class MembersController < ApplicationController
   def dashboard
     # Add your logic for the member dashboard here
     # For example, if you want to display a message:
+    @member = current_user
     @message = "Welcome to the Member Dashboard, #{current_user.email}!"
   end
 

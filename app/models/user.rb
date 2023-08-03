@@ -5,6 +5,8 @@
 #  id                     :integer          not null, primary key
 #  email                  :string           default(""), not null
 #  encrypted_password     :string           default(""), not null
+#  membership_status      :boolean          default(FALSE)
+#  number                 :string
 #  remember_created_at    :datetime
 #  reset_password_sent_at :datetime
 #  reset_password_token   :string
@@ -19,6 +21,8 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  validates :membership_status, presence: true
+  validates :number, presence: true
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 end
